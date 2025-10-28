@@ -3,89 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emiliano Naranjo - Educación Inclusiva</title>
-  <meta name="description" content="Sitio personal de Emiliano Naranjo, docente universitario especializado en educación física, inclusión y derechos humanos. Recursos, publicaciones y talleres sobre educación inclusiva y discapacidad.">
-  <meta name="keywords" content="Emiliano Naranjo, educación inclusiva, educación física adaptada, discapacidad motora, derechos humanos, inclusión educativa">
+  <title>Emiliano Naranjo - Educador</title>
+  <meta name="description" content="Sitio personal de Emiliano Naranjo, profesor universitario especializado en educación física adaptada e inclusión. Descubre sus publicaciones, investigaciones y propuestas para una educación inclusiva.">
+  <meta name="keywords" content="Emiliano Naranjo, educación inclusiva, educación física adaptada, discapacidad motora, derechos humanos">
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #111; background-color: #fff; margin: 0; padding: 0; }
-    header { background-color: #0a4a83; color: white; padding: 1rem; text-align: center; }
-    nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; flex-wrap: wrap; }
+    :root {
+      --primary-color: #0a4a83;
+      --secondary-color: #f0f4f8;
+    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #222; background-color: var(--secondary-color); }
+    header { position: relative; overflow: hidden; height: 60vh; }
+    header .slide { position: absolute; width: 100%; height: 100%; object-fit: cover; top: 0; left: 0; opacity: 0; transition: opacity 1s ease-in-out; }
+    header .slide.active { opacity: 1; }
+    header .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 1rem; }
+    header h1 { font-size: 2.5rem; margin: 0; }
+    header p { font-size: 1.2rem; }
+    nav { background-color: var(--primary-color); }
+    nav ul { display: flex; list-style: none; margin: 0; padding: 0; justify-content: center; flex-wrap: wrap; }
     nav ul li { margin: 0.5rem 1rem; }
     nav ul li a { color: white; text-decoration: none; font-weight: bold; }
-    nav ul li a:focus, nav ul li a:hover { text-decoration: underline; }
-    main { padding: 1rem; }
+    nav ul li a:hover, nav ul li a:focus { text-decoration: underline; }
+    main { max-width: 900px; margin: auto; padding: 2rem 1rem; background-color: white; }
     section { margin-bottom: 2rem; }
-    h1, h2 { margin-top: 0; }
-    img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
-    footer { background-color: #0a4a83; color: white; padding: 1rem; text-align: center; }
+    section h2 { border-bottom: 2px solid var(--primary-color); padding-bottom: 0.5rem; }
+    footer { background-color: var(--primary-color); color: white; text-align: center; padding: 1rem; }
     footer a { color: #cce4f6; text-decoration: underline; }
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Emiliano Naranjo</h1>
-    <p>Transformando la Educación con Inclusión</p>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#publicaciones">Publicaciones</a></li>
-        <li><a href="#talleres">Talleres y capacitaciones</a></li>
-        <li><a href="#entrevistas">Entrevistas</a></li>
-        <li><a href="#blog">Blog / Recursos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80" alt="Estudiantes trabajando juntos en un aula inclusiva" class="slide active">
+    <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=1600&q=80" alt="Actividad física adaptada en exteriores" class="slide">
+    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80" alt="Profesor en silla de ruedas enseñando a estudiantes" class="slide">
+    <div class="overlay">
+      <h1>Emiliano Naranjo</h1>
+      <p>Educador en inclusión y derechos humanos</p>
+    </div>
   </header>
+  <nav>
+    <ul>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#publicaciones">Publicaciones</a></li>
+      <li><a href="#talleres">Talleres</a></li>
+      <li><a href="#entrevistas">Entrevistas</a></li>
+      <li><a href="#blog">Blog/Recursos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
   <main>
-    <section id="inicio">
-      <h2>Bienvenido</h2>
-      <p>Explora estrategias y recursos para una educación accesible, garantizando los derechos de las personas con discapacidad.</p>
-      <!-- Imagen de portada con descripción alternativa; reemplaza el src con una foto autorizada -->
-      <img src="https://via.placeholder.com/900x400.png?text=Educaci%C3%B3n+Inclusiva" alt="Fotografía de Emiliano Naranjo impartiendo una clase inclusiva">
-    </section>
     <section id="sobre-mi">
       <h2>Sobre mí</h2>
-      <p>Mi nombre es Emiliano Naranjo. Soy docente universitario especializado en educación física y posgrado en educación. Como persona con discapacidad motora que se desplaza en silla de ruedas, trabajo para promover la educación inclusiva y la defensa de los derechos humanos. Actualmente soy doctorando en Educación (UNTREF/UNSAM/UNLa), licenciado en educación física (UNLaM), especialista en gestión educativa y magíster en Educación (UdeSA). Me desempeño como profesor en la Universidad Nacional de Hurlingham y he sido representante del Estado argentino ante el Comité sobre los Derechos de las Personas con Discapacidad de la ONU y seleccionado por UNESCO como defensor de la educación y la inclusión para América Latina y el Caribe.</p>
+      <p>Me llamo Emiliano Naranjo y soy docente universitario especializado en educación física adaptada, con posgrados en educación. Como persona con discapacidad motora que se desplaza en silla de ruedas, trabajo para promover una educación inclusiva y la defensa de los derechos humanos. Soy doctorando en Educación (UNTREF/UNSAM/UNLa), licenciado en educación física (UNLaM), especialista en Gestión Educativa y magíster en Educación (UdeSA). Desempeño tareas como profesor en la Universidad Nacional de Hurlingham y he sido representante del Estado argentino ante el Comité sobre los Derechos de las Personas con Discapacidad de la ONU, además de ser seleccionado por la UNESCO como defensor de la educación y la inclusión para América Latina y el Caribe.</p>
     </section>
     <section id="publicaciones">
-      <h2>Publicaciones y artículos</h2>
-      <p>A continuación se presenta una selección de mis publicaciones y trabajos de investigación:</p>
+      <h2>Publicaciones</h2>
+      <p>Estas son algunas de mis principales contribuciones en investigación y divulgación:</p>
       <ul>
-        <li><strong>Tesis de maestría:</strong> «La educación superior y el derecho de las personas con discapacidad en la formación docente de educación física» (Dir. Dra. Angela Angestein).</li>
-        <li><strong>Investigación:</strong> «Estudio sobre buenas prácticas de educación inclusiva en escuelas comunes de la provincia de Buenos Aires y la Ciudad Autónoma de Buenos Aires».</li>
-        <li><strong>Libro:</strong> <em>Malestar de educador</em> (autor: Emiliano Naranjo).</li>
-        <li><strong>Artículos:</strong> «106 minutos para porno inspirarnos», «La transmisión (Cobra Kai)», «La educación es un bien público, no económico», «¿La asignatura educación física es práctica o es teórica?». </li>
+        <li><strong>Tesis de maestría:</strong> <a href="http://hdl.handle.net/10908/17667" target="_blank" rel="noopener">“La educación superior y el derecho de las personas con discapacidad en la formación docente de educación física”</a>. Trabajo dirigido por la Dra. Angela Angestein y disponible en el repositorio digital de la Universidad de San Andrés.</li>
+        <li><strong>Libro:</strong> <a href="https://www.efdeportes.com/efd30/malestar.htm" target="_blank" rel="noopener"><em>Malestar de educador</em></a>. Este libro cuestiona la incoherencia entre el discurso de la inclusión y las prácticas de la educación física.</li>
+        <li><strong>Investigación:</strong> “Estudio sobre buenas prácticas de educación inclusiva en escuelas comunes de la provincia de Buenos Aires y la Ciudad Autónoma de Buenos Aires”.</li>
+        <li><strong>Artículos:</strong> “106 minutos para ‘porno’ inspirarnos”, “La transmisión (Cobra Kai)”, “La educación es un bien público, no económico”, “¿La asignatura educación física es práctica o es teórica?”.</li>
       </ul>
     </section>
     <section id="talleres">
       <h2>Talleres y capacitaciones</h2>
-      <p>En esta sección encontrarás información sobre talleres y capacitaciones que he desarrollado. Actualmente no mantengo un calendario de eventos; estos ejemplos reflejan trabajos realizados y sirven como guía de futuras propuestas. Para más información o para solicitar una capacitación, ponte en contacto.</p>
+      <p>No tengo un calendario de eventos abierto al público, pero aquí puedes ver ejemplos de los talleres y capacitaciones que he brindado. Si deseas contratar una capacitación o adaptar alguno de estos talleres, ponte en contacto conmigo.</p>
       <ul>
-        <li>Modelo de capacitación (enlace de descarga disponible bajo solicitud).</li>
-        <li>Ejemplo de capacitación en vídeo (adjunto en página original).</li>
+        <li>Capacitación en educación física adaptada y accesible.</li>
+        <li>Seminario sobre derechos y políticas para estudiantes con discapacidad.</li>
+        <li>Taller de estrategias inclusivas para docentes de educación física.</li>
       </ul>
     </section>
     <section id="entrevistas">
       <h2>Entrevistas y apariciones</h2>
-      <p>Aquí se listan algunas entrevistas y apariciones en medios en las que he participado, centrándonos en la educación inclusiva y los derechos de las personas con discapacidad:</p>
+      <p>A lo largo de mi trayectoria he sido invitado a participar en diversas entrevistas y publicaciones que abordan la educación y la inclusión:</p>
       <ul>
-        <li>Entrevistas a ex ministros de educación: Juan Carlos Tedesco, Adriana Puiggrós, Silvina Gvirtz, Daniel Filmus y Mariano Narodowski.</li>
-        <li>Participación en «En sintonía educar» (programa de radio).</li>
-        <li>Artículo en el diario <em>Página 12</em>.</li>
-        <li>Colaboración en la boletín «Acción colectiva».</li>
-        <li>Artículo en la revista «Palabra maestra».</li>
+        <li>Conversaciones con ex ministros de Educación: Juan Carlos Tedesco, Adriana Puiggrós, Silvina Gvirtz, Daniel Filmus y Mariano Narodowski.</li>
+        <li>Aparición en el programa de radio “En sintonía educar”.</li>
+        <li>Nota en el diario <em>Página 12</em> sobre educación inclusiva.</li>
+        <li>Artículo en la revista “Palabra maestra”.</li>
+        <li>Participación en el boletín “Acción colectiva”.</li>
       </ul>
     </section>
     <section id="blog">
-      <h2>Blog / Recursos</h2>
-      <p>Este espacio está destinado a compartir reflexiones, estrategias y recursos relacionados con la educación inclusiva y la educación física adaptada. Próximamente se habilitará la posibilidad de compartir material para su revisión antes de publicarlo.</p>
+      <h2>Blog y recursos</h2>
+      <p>Este espacio se actualizará periódicamente con reflexiones, artículos y recursos didácticos para docentes, familias y estudiantes. Si quieres compartir material para que lo revise y publique, envíamelo por correo.</p>
     </section>
     <section id="contacto">
       <h2>Contacto</h2>
-      <p>Para consultas, colaboración o solicitar talleres, puedes escribirme a:</p>
-      <p><a href="mailto:proyectoddef@gmail.com">proyectoddef@gmail.com</a></p>
-      <p>También puedes seguirme en redes sociales:</p>
+      <p>Si tienes preguntas, deseas proponer un proyecto o contratar una capacitación, puedes escribir a <a href="mailto:proyectoddef@gmail.com">proyectoddef@gmail.com</a>. También puedes encontrarme en redes sociales:</p>
       <ul>
         <li><a href="https://www.facebook.com/emiliano.naranjo" aria-label="Facebook de Emiliano Naranjo">Facebook</a></li>
         <li><a href="https://www.instagram.com/epnnaranjo/" aria-label="Instagram de Emiliano Naranjo">Instagram</a></li>
@@ -94,8 +103,17 @@
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Emiliano Naranjo | Educación Inclusiva y Derechos Humanos</p>
+    <p>&copy; 2025 Emiliano Naranjo. Todos los derechos reservados.</p>
     <p><a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a></p>
   </footer>
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    setInterval(() => {
+      slides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add('active');
+    }, 5000);
+  </script>
 </body>
 </html>
